@@ -9,6 +9,9 @@ const BONO_VIP = 10;
 const PORCENTAJE_MINIMO = 0;
 const PORCENTAJE_MAXIMO = 100;
 
+/** Base para convertir un porcentaje en fracción (comentario de revisión del PR #1). */
+const BASE_PORCENTUAL = 100;
+
 /**
  * Valida que el precio sea un número finito mayor o igual a 0 (H-09).
  *
@@ -69,7 +72,7 @@ function calcularDescuento(precio, porcentaje, esVip) {
   validarPorcentaje(porcentaje);
   validarVip(esVip);
 
-  let descuento = precio * porcentaje / PORCENTAJE_MAXIMO;
+  let descuento = precio * porcentaje / BASE_PORCENTUAL;
   if (esVip === true) {
     descuento = descuento + BONO_VIP;
   }
