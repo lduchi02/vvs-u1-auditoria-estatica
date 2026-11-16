@@ -1,0 +1,17 @@
+
+> vvs-u1-auditoria-estatica@1.0.0 lint
+> eslint src/
+
+
+/workspace/vvs_u1/vvs-u1-auditoria-estatica/src/descuentos.js
+  2:3   error    Unexpected var, use let or const instead  no-var
+  3:13  error    Expected '===' and instead saw '=='       eqeqeq
+  3:22  error    Expected { after 'if' condition           curly
+  3:46  warning  No magic number: 10                       no-magic-numbers
+  4:25  error    Expected { after 'if' condition           curly
+  4:25  warning  Unexpected console statement              no-console
+  5:3   error    Unexpected var, use let or const instead  no-var
+
+✖ 7 problems (5 errors, 2 warnings)
+  4 errors and 0 warnings potentially fixable with the `--fix` option.
+
